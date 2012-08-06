@@ -26,3 +26,7 @@
 
 /**/.*.swp
 /**/*~
+
+/public/dokuwiki_pages
+/public/*.txt
+/public/*.log

@@ -1,0 +1,80 @@
+en:
+  # Keyword Category resource
+  keyword_categories:
+    index:
+      category: 'Category'
+      actions: 'Actions'
+    show:
+      keyword: 'Keyword'
+      actions: 'actions'
+    new:
+      title: 'New Keyword Category'
+    edit:
+      title: 'Edit Keyword Category'
+
+  # Keyword resource
+  keywords:
+    index:
+      title: 'Keywords'
+      category: 'Category'
+      keyword: 'Keyword'
+      actions: 'Actions'
+    show:
+      sheet: 'Sheet'
+      actions: 'Actions'
+    new:
+      title: 'New Keyword'
+    edit:
+      title: 'Edit Keyword'
+
+  # Sheet resource
+  sheets:
+    index:
+      title: 'Sheets'
+      keywords: 'keywords'
+      sheet: 'Sheet'
+      actions: 'Actions'
+    new:
+      title: 'New Sheet'
+    edit:
+      title: 'Edit Sheet'
+
+  # Action Buttons
+  actions:
+    confirm_delete: 'Are you sure?'
+
+    keywords:
+      new: 'New Keyword'
+      edit: 'Edit'
+      delete: 'Delete'
+    keyword_categories:
+      new: 'New Keyword Category'
+      edit: 'Edit'
+      delete: 'Delete'
+    sheets:
+      new: 'New sheet'
+      edit: 'Edit'
+      delete: 'Delete'
+
+  # Menu and breadcrumb
+  nav:
+    home: 'Home'
+    sign_out: 'Sign out'
+    sign_in: 'Sign in'
+
+    keyword_categories:
+      index: 'Keyword Categories'
+      new: 'New'
+      edit: 'Edit'
+    keywords:
+      index: 'Keywords'
+      new: 'New'
+      edit: 'Edit'
+    sheets:
+      index: 'Sheets'
+      new: 'New'
+      edit: 'Edit'
+
+  errors:
+    one_skill_keyword: 'You must select at least one skill keyword'
+

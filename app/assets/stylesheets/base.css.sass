@@ -1,0 +1,252 @@
+//@import tables
+
+//Header
+$header1: 40px
+$header2: 40px
+$fixedElements: $header1 + $header2 + 1px
+$level1: #EEEEFF
+$level2: #CEA8F4
+$level3: #9669FE
+
+header.navbar
+  position: fixed
+  width: 100%
+  height: $header1
+  z-index: 10
+  > .navbar-inner
+    background:
+      color: black
+      image: none
+    +border-radius(0)
+  .input-prepend
+    letter-spacing: -3px
+    input
+      width: 170px
+      letter-spacing: normal
+  .container
+    ul.nav
+      > li > a
+        color: #eee
+        +text-shadow(rgba(0,0,0,0.5) 0 1px 0)
+
+//Container
+section.container
+  position: relative
+  padding: #{$header1} 0 0 0
+  margin: 0 20px
+  > header
+    position: fixed
+    top: 41px
+    right: 0
+    left: 0
+    height: $header2
+    background:
+      image: none
+      color: #efefef
+    z-index: 5
+    +border-radius(0)
+    h1
+      position: fixed
+      left: 65px
+      white-space: nowrap
+      font-size: 25px
+    p.pull-left,
+    div.pull-right
+      margin-top: 5px
+    .pull-right
+      position: fixed
+      right: 20px
+  .label
+    font-weight: normal
+  aside
+    position: fixed
+    top: $fixedElements + 1px
+    bottom: 0
+    left: 20px
+    width: 280px
+    padding: 20px 20px 20px 0
+    overflow: auto
+    background-color: white
+    &.level_1
+      border-right: 4px solid #{$level1} // #a2e0cc
+    &.level_2
+      border-right: 4px solid #{$level2} // #69aeff
+    &.level_3
+      border-right: 4px solid #{$level3} // #f2d717
+
+    > p, > div
+      padding-bottom: 20px
+      margin-bottom: 20px
+      border-bottom: 1px solid #eee
+
+    p.picture
+    .history
+      ul
+        margin-bottom: 0
+        li
+          color: grey
+          font-size: 11px
+          line-height: 16px
+          &:first-letter
+            text-transform: capitalize
+          &:first-child
+            color: black
+  article
+    &.sheet:not(.new)
+      position: relative
+      padding-top: 19px
+      margin: #{$fixedElements - 38px} 0 0 324px
+      overflow: auto
+      blockquote
+        margin: 30px
+        p
+          color: grey
+          font:
+            weight: normal
+            style: italic
+            size: 13px
+      img
+        margin: 20px 0
+      .actions
+        position: fixed
+        top: $fixedElements
+        right: 20px
+        padding: 5px
+        background-color: #efefef
+        +border-radius(0 0 3px 3px)
+        +box-shadow(rgba(0,0,0,0.25) 0 1px 3px)
+        .btn-primary
+          margin-right: 4px
+
+
+//KIKI styles
+
+.keyword-categories,
+.keyword-category,
+.keywords,
+.keyword,
+  tr
+    th:last-child
+      width: 15%
+      font-weight: normal
+
+.sheets,
+.search
+  table
+    height: 100%
+  tr
+    height: 100%
+    td.meta
+      text-align: right
+  tr:last-child
+    td
+      border-bottom: 1px solid #DDD
+
+  td.level
+    text-align: center
+    vertical-align: middle
+    padding: 0 5px
+    height: 100%
+    div
+      display: inline-block
+      white-space: nowrap
+      overflow: hidden
+      vertical-align: middle
+      height: 100% 
+      width: 5px
+      margin: 0
+
+  .results
+    position: relative
+    right: 8px
+    width: 100%
+    text-align: right
+    font-size: 80%
+    color: #BBB
+
+  .nbr
+    background-color: #BBB
+    color: white
+    padding: 1px 3px
+
+  .level1
+    background-color: #{$level1}
+
+  .level2
+    background-color: #{$level2}
+
+  .level3
+    background-color: #{$level3}
+
+
+.sheet
+  .metadata
+    padding-top: 10px
+    clear: both
+  .controls
+    label
+      display: inline-block
+      margin-right: 15px
+
+.last-modified
+  display: block
+
+.filters
+  a
+    display: block
+    &.active
+      font-weight: bold
+  dl
+    margin-top: 13px
+  dd
+    margin-left: 0px
+  dt
+    margin-bottom: 13px
+
+//Size Behaviour
+
+@media (min-width: 900px)
+  section.container
+    width: auto
+
+@media (max-width: 900px)
+  body
+    padding: 0
+  section.container
+    width: 860px
+    margin: 0
+    padding: 40px 20px 0 20px
+    aside
+      position: static
+      width: 100%
+      width: 860px
+      height: 151px
+      margin-top: $header2 + 1px
+      padding: 20px 0
+      &.level_1
+        border:
+          right: 0
+          bottom: 4px solid #a2e0cc
+      &.level_2
+        border:
+          right: 0
+          bottom: 4px solid #69aeff
+      &.level_3
+        border:
+          right: 0
+          bottom: 4px solid #f2d717
+      p, div
+        float: left
+        width: 31%
+        padding: 0 10px 0 0
+        margin: 0 10px 0 0
+        border:
+          bottom: 0
+          right: 1px solid #eee
+        &.history
+          border: 0
+    article
+      width: 860px
+      &.sheet:not(.new)
+        margin: 0
+
